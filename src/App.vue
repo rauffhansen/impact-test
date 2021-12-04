@@ -1,12 +1,10 @@
 <template>
   <Header @update:menu="updateMenu" />
-  <!-- <Nav :active="toggleMenu" /> -->
   <router-view />
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-// import Nav from "./components/Nav.vue";
 export default {
   name: "app",
   components: {
@@ -69,5 +67,14 @@ body {
   z-index: 0;
   pointer-events: none;
   backdrop-filter: blur(2px);
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 </style>

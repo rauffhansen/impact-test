@@ -1,6 +1,6 @@
 <template>
   <section class="b-container">
-    <h1 class="display-4 fw-bold title px-2">Beerlection</h1>
+    <h1 class="title px-2">Beerlection</h1>
     <BeerList />
   </section>
 </template>
@@ -17,6 +17,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .title {
-  padding: 0rem 2rem;
+  font-size: clamp(2rem, 4vw, 4rem);
 }
 </style>

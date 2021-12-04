@@ -1,7 +1,7 @@
 <template>
   <section class="details" :class="{ open: objitem.open }">
     <div>
-      <p
+      <div
         class="close"
         @click="
           $emit('close:details', { open: false, id: '' });
@@ -9,7 +9,7 @@
         "
       >
         close
-      </p>
+      </div>
     </div>
     <div v-if="data !== null">
       <h2 class="title">{{ data[0].name }}</h2>
@@ -209,6 +209,7 @@ export default {
   color: #daa700;
   font-size: 1.2rem;
   font-weight: 600;
+  margin: 0 0 1rem;
 }
 .age {
   color: #fff;
