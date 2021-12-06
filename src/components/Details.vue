@@ -16,10 +16,10 @@
       <p class="tagline">{{ data[0].tagline }}</p>
       <p class="age">brewed</p>
       <p class="tagline">{{ data[0].first_brewed }}</p>
-      <img class="details-img" :src="data[0].image_url" alt="beer" />
-      <div class="details-info"></div>
+      <img class="img" :src="data[0].image_url" alt="beer" />
+      <div class="info"></div>
     </div>
-    <div v-if="loading">
+    <div class="loading" v-if="loading">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -192,7 +192,7 @@ export default {
   font-weight: 700;
   text-align: right;
 }
-.details-img {
+.img {
   height: 300px;
   position: absolute;
   right: 2rem;
@@ -217,7 +217,7 @@ export default {
   line-height: 1;
   margin: 0;
 }
-.details-info {
+.info {
   background-color: #fff;
   border-radius: 1rem;
   width: 100%;
@@ -225,5 +225,13 @@ export default {
   inset: auto 0 0 0;
   height: 45%;
   z-index: -1;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

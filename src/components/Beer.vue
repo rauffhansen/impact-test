@@ -1,8 +1,11 @@
 <template>
-  <div @click="initDetails()" class="beer">
-    <h4 class="name">{{ item.name }}</h4>
-    <img :src="item.image_url" alt="beer" />
-    <p class="lead">Brewed: {{ item.first_brewed }}</p>
+  <div class="relative">
+    <div @click="initDetails()" class="beer">
+      <h4 class="name">{{ item.name }}</h4>
+      <img :src="item.image_url" alt="beer" />
+      <p class="lead">Brewed: {{ item.first_brewed }}</p>
+    </div>
+    <button class="addBtn flex-center" @click="addBeer()">Add</button>
   </div>
 </template>
 <script>
@@ -15,6 +18,9 @@ export default {
   methods: {
     initDetails() {
       this.$emit("init:details", { open: true, id: this.item.id });
+    },
+    addBeer() {
+      this.$emit("addBeer:details", this.item);
     },
   },
 };
@@ -35,6 +41,7 @@ export default {
   border-radius: 1rem;
   padding: 2rem 1.5rem;
   width: 100%;
+  height: 100%;
   background-color: var(--beer);
   flex-basis: clamp(200px, 6vw, 400px);
   cursor: pointer;
@@ -53,5 +60,28 @@ img {
   height: clamp(10em, 20vw, 15em);
   align-self: center;
   padding: 1rem;
+}
+
+.addBtn {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #121212;
+  color: #fff;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: rgb(255, 255, 255);
+  color: #121212;
+  box-shadow: 1px 1px 20px -2px rgba(0, 0, 0, 0.3);
 }
 </style>

@@ -9,7 +9,6 @@ export default {
   name: "app",
   components: {
     Header,
-    // Nav,
   },
   data() {
     return {
@@ -25,6 +24,12 @@ export default {
 </script>
 
 <style lang="scss">
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 :root {
   --beer: #fec601;
   --beer-dark: #dc8400;
@@ -42,24 +47,21 @@ export default {
 body {
   margin: 0;
 }
-
 .lead {
   color: #fff;
   text-align: center;
   margin-top: 0.5rem;
 }
-
 .b-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: clamp(1rem, 2vw, 2rem);
+  min-height: 57em;
 }
-
 .b-container {
   max-width: 90em;
   margin: 0 auto;
 }
-
 .b-backdrop {
   position: fixed;
   inset: 0;
@@ -68,13 +70,17 @@ body {
   pointer-events: none;
   backdrop-filter: blur(2px);
 }
-
+.m-0 {
+  margin: 0;
+}
 .p-2 {
   padding: 1rem;
 }
-
 .px-2 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.relative {
+  position: relative;
 }
 </style>
