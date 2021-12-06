@@ -26,7 +26,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 I read the assignement as it was i PWA web app that was needed. Since i have not tried to set one up, and make one, the challenge seemed very steep.
 I used:
 1. Vue-cli to setup the app.
-2. Scoped scss/sass, wich took some time to get to work.
-3. EsLint to lint the script. Wich kept bugging, and made it impossible to build the setup.
-4. Typescript.
-6. Vue-router to setup the routing, though not used.
+2. Scoped scss/sass.
+3. EsLint to check for errors and prettier for "prettiness of the code".
+4. Typescript at most, but my build had an issue where the VS Code and ESLint.
+
+I chose to try and build it all myself without using any css frameworks, or any vue modules.
